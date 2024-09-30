@@ -2,7 +2,7 @@ import { refs } from './refs';
 import { fetchNews } from './news-api/news-service';
 import { appendNewsArticles } from './helpers/appendNewsMarkup';
 import { PER_PAGE } from './news-api/config';
-import IziToast from 'izitoast';
+import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 let currentPage = 1;
@@ -32,7 +32,7 @@ async function handleSubmit(event) {
   } catch (error) {
     console.log(error);
     refs.loadMoreBtn.classList.add('is-hidden');
-    IziToast.error({ message: error.message });
+    iziToast.error({ message: error.message });
   } finally {
     form.reset();
   }
