@@ -2,7 +2,7 @@ import { refs } from './refs';
 import { fetchNews } from './news-api/news-service';
 import { appendNewsArticles } from './helpers/appendNewsMarkup';
 import { PER_PAGE } from './news-api/config';
-import { izitoast } from 'izitoast';
+import izitoast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 let currentPage = 1;
