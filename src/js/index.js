@@ -32,7 +32,7 @@ async function handleSubmit(event) {
   } catch (error) {
     console.log(error);
     refs.loadMoreBtn.classList.add('is-hidden');
-    izitoast.error({ message: error.message });
+    IziToast.error({ message: error.message });
   } finally {
     form.reset();
   }
@@ -49,7 +49,7 @@ async function handleLoadMore(event) {
 
     if (currentPage >= Math.min(pages, 16)) {
       refs.loadMoreBtn.classList.add('is-hidden');
-      izitoast.success({ message: 'It is last page' });
+      IziToast.success({ message: 'It is last page' });
     }
   } catch (error) {
     console.log(error);
